@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.employeesView {
+  @apply flex flex-wrap justify-evenly ; 
+}
+
+.employeeCard {
+  @apply flex-none basis-1/4 min-w-[180px] bg-gray-200 border-black border-2 text-black p-2.5 m-5;
+  border-radius: 5px;
+}
+
+.actions {
+  @apply flex justify-end;
+}
+
+.editBtn {
+  @apply px-2 py-1 rounded bg-teal-600 text-white;
+}
+
+.closeBtn {
+  @apply p-1 text-red-600 font-bold text-lg;
+}
+
+.employeeEdit {
+  @apply z-10 bg-white text-black border-2 border-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.entry {
+  @apply grid grid-cols-3 gap-4 text-left;
+}
+
+.entry .tag{
+  @apply col-span-1;
+}
+.entry .value{
+  @apply col-span-2 font-bold;
+}
+.entryEdit{
+ @apply grid grid-cols-3  text-left my-2 mx-5;
+ 
+
+}
+.entryEdit label{
+  @apply col-span-1;
+}
+.entryEdit input{
+  @apply col-span-2;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+.employeeEdit {
+  @apply  z-10  bg-gray-300 text-black  border-2  border-black  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+
+  border-radius: 5px;
+
+  }
+.employeeEdit .title h6{
+  @apply text-lg font-extrabold
+}
+.saveBtn{
+  @apply flex flex-row justify-end ;
+  color: white;
+}
+.saveBtn button{
+  
+@apply px-5 py-2 rounded bg-teal-600 text-white m-3;
+}
+.editHeader{
+  @apply flex flex-row justify-between
+}
+.editHeader .title{
+  @apply my-5 ml-5
+}
+.editHeader .closeBtn{
+  @apply mb-10 mx-2
+}
+ /* z-index:10;
+  background-color: white;
+  color: #000;
+
+  padding: 10px;
+
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+
+  
