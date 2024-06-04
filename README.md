@@ -6,7 +6,8 @@ git clone https://github.com/Latani-09/employees
 ```
 2.**go to project directory**
 ```bash
-cd employeeFrontend
+cd employees
+cd employeesFrontend
 ```
 3.**install vite**
 ```bash
