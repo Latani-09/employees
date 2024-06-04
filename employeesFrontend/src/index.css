@@ -9,7 +9,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color:rgb(215, 215, 215);
+  background: radial-gradient(circle, rgb(214, 215, 215) 20%, rgb(254, 255, 248) 60%, rgb(214, 215, 215) 100%);
+
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

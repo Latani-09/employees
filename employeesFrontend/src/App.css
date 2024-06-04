@@ -29,39 +29,43 @@
 }
 
 .employeeCard {
-  @apply flex-none basis-1/4 min-w-[180px] bg-gray-200 border-black border-2 text-black p-2.5 m-5;
+  @apply flex-none basis-1/4 min-w-[180px]  border-black border-2 bg-gray-300 text-black p-5 m-5 shadow-slate-700 shadow-lg;
   border-radius: 5px;
 }
+.employeeName{
+  @apply font-bold text-lg my-auto ml-5;
+}
 
+.entry {
+  @apply grid grid-cols-3 gap-4 text-left my-5;
+}
+
+.entry .tag{
+  @apply col-span-1 text-right ;
+}
+.entry .value, .employeeName{
+  @apply col-span-2 font-bold;
+}
+.entry .value span{
+  @apply text-gray-600 mr-2;
+}
 .actions {
-  @apply flex justify-end;
+  @apply flex justify-end mt-3;
 }
-
 .editBtn {
-  @apply px-2 py-1 rounded bg-teal-600 text-white;
+  @apply p-1 rounded;
+}
+.dangerBtn {
+  @apply p-1 font-bold text-lg mx-2;
 }
 
-.closeBtn {
-  @apply p-1 text-red-600 font-bold text-lg;
-}
+
 
 .employeeEdit {
   @apply z-10 bg-white text-black border-2 border-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
 }
-
-.entry {
-  @apply grid grid-cols-3 gap-4 text-left;
-}
-
-.entry .tag{
-  @apply col-span-1;
-}
-.entry .value{
-  @apply col-span-2 font-bold;
-}
 .entryEdit{
  @apply grid grid-cols-3  text-left my-2 mx-5;
- 
 
 }
 .entryEdit label{
@@ -84,12 +88,12 @@
   @apply text-lg font-extrabold
 }
 .saveBtn{
-  @apply flex flex-row justify-end ;
-  color: white;
+  @apply flex flex-row  m-3;
+
 }
 .saveBtn button{
   
-@apply px-5 py-2 rounded bg-teal-600 text-white m-3;
+@apply px-5 py-2 rounded
 }
 .editHeader{
   @apply flex flex-row justify-between
@@ -97,8 +101,9 @@
 .editHeader .title{
   @apply my-5 ml-5
 }
-.editHeader .closeBtn{
-  @apply mb-10 mx-2
+
+.error{
+  color:red
 }
  /* z-index:10;
   background-color: white;
