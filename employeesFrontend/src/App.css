@@ -29,7 +29,7 @@
 }
 
 .employeeCard {
-  @apply flex-none basis-1/4 min-w-[180px]  border-black border-2 bg-gray-300 text-black p-5 m-5 shadow-slate-700 shadow-lg;
+  @apply flex-none basis-1/4 min-w-fit  border-black border-2 bg-gray-300 text-black p-5 m-5 shadow-slate-700 shadow-lg;
   border-radius: 5px;
 }
 .employeeName{
@@ -59,10 +59,16 @@
   @apply p-1 font-bold text-lg mx-2;
 }
 
-
-
+.blur-background {
+  filter: blur(5px);
+}
+.alertBox{
+  @apply z-10  fixed  text-white  bg-teal-950 top-5 right-5 ;
+}
+/*employee edit po styles*/
 .employeeEdit {
-  @apply z-10 bg-white text-black border-2 border-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  @apply z-10 bg-white text-black border-2 border-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  border-radius: 5px;
 }
 .entryEdit{
  @apply grid grid-cols-3  text-left my-2 mx-5;
@@ -78,12 +84,7 @@
   padding: 5px;
   width: 100%;
 }
-.employeeEdit {
-  @apply  z-10  bg-gray-300 text-black  border-2  border-black  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
 
-  border-radius: 5px;
-
-  }
 .employeeEdit .title h6{
   @apply text-lg font-extrabold
 }
