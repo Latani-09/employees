@@ -3,7 +3,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/employee-frontend.git
+   git clone https://github.com/Latani-09/employees
    ```
 2.go to project directory
    ```bash
