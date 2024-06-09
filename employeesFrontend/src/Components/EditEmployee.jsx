@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { ActionButton } from "../UI/Buttons";
 export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAlert,setMessage }) => {
     const [employeeEdit, setEmployeeEdit] = useState(employee);
-    const [errors, setErrors] = useState([]);
+    const [errors, setErrors] = useState({});
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -14,12 +14,17 @@ export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAl
     };
   
     const validate = () => {
-      let tempErrors = [];
-      if (!employeeEdit.employee_name) tempErrors.push("Name");
-      if (!employeeEdit.employee_salary) tempErrors.push("Salary");
-      if (!employeeEdit.employee_age) tempErrors.push("Age");
+      let tempErrors = {
+        name:false,
+        age:false,
+        salary:false
+      };
+      if (!employeeEdit.employee_name) tempErrors.name=true;
+      if (!employeeEdit.employee_salary) tempErrors.age=true;
+      if (!employeeEdit.employee_age) tempErrors.salary=true;
+      console.log(tempErrors);
       setErrors(tempErrors);
-      return tempErrors.length === 0;
+      return !(tempErrors.salary||tempErrors.age||tempErrors.name);
     };
   
     const handleSave = () => {
@@ -56,6 +61,8 @@ export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAl
             onChange={handleChange}
           />
         </div>
+        { <div className="entryError">{ errors.name  && 'input is required'} </div>}
+
         <div className="entryEdit">
           <label htmlFor="salary">Salary:</label>
           <input
@@ -65,6 +72,8 @@ export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAl
             onChange={handleChange}
           />
         </div>
+        <div className="entryError">{ errors.name  && 'input is required'}  </div>
+
         <div className="entryEdit">
           <label htmlFor="age">Age:</label>
           <input
@@ -75,7 +84,7 @@ export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAl
             onChange={handleChange}
           />
         </div>
-        {errors.length > 0 && <div className="error">Fill required inputs</div>}
+       <div className="entryError">{ errors.name  && 'input is required'}  </div>
         <div className="actions flex flex-row">
           <div>
             <ActionButton onClick={handleSave}>Save</ActionButton>
