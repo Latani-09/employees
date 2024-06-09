@@ -17,7 +17,6 @@ export const DangerButton = styled(Button)({
 export const ActionButton = styled(Button)({
     color: 'rgb(50,50,255)',
     minWidth:'40px',
-    margin:'3px',
     '&:hover': {
       backgroundColor: 'rgb(50,50,255)',
       color:'white'

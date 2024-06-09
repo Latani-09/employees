@@ -65,7 +65,24 @@
 .alertBox{
   @apply z-10  fixed  text-white  bg-teal-950 top-5 right-5 ;
 }
-/*employee edit po styles*/
+/*employee edit popup styles*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.popup {
+  z-index: 1100; /* Make sure it's above the overlay */
+}
 .employeeEdit {
   @apply z-10 bg-white text-black border-2 border-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   border-radius: 5px;

@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import {useState} from 'react';
 import { ActionButton } from "../UI/Buttons";
-export const EditEmployee = ({ employee, setPopEdit, setEmployees,setAlert,setMessage }) => {
+export const EditEmployee = ({ dispatch,employee, setPopEdit, setEmployees,setAlert,setMessage }) => {
     const [employeeEdit, setEmployeeEdit] = useState(employee);
     const [errors, setErrors] = useState([]);
   
@@ -24,11 +24,10 @@ export const EditEmployee = ({ employee, setPopEdit, setEmployees,setAlert,setMe
   
     const handleSave = () => {
       if (validate()) {
-        setEmployees((prevEmployees) =>
-          prevEmployees.map((emp) =>
-            emp.id === employeeEdit.id ? employeeEdit : emp
-          )
-        );
+        dispatch({
+          type:'edit',
+          employeeEdit:employeeEdit
+        })
         setPopEdit(false);
         setMessage('Employee details updated');
         setAlert(true);
