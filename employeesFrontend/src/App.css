@@ -73,7 +73,7 @@
 }
 
 .alertBox {
-  @apply z-10 fixed text-white bg-teal-950 top-5 right-5 p-4 rounded-lg shadow-lg;
+  @apply z-10 fixed text-white bg-teal-950 opacity-90 top-5 right-5 p-4 rounded-lg shadow-lg;
 }
 
 /* Employee edit popup styles */
